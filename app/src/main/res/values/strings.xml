@@ -8,4 +8,5 @@
     <string name="common_description">Boton</string>
     <string name="img_description">Imagen del genero</string>
     <string name="weight">Peso</string>
+    <string name="textAge">Edad</string>
 </resources>
