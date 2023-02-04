@@ -1,276 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:paddingHorizontal="16dp"
-    android:paddingVertical="32dp"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardMale"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/common_card_view_height"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/common_card_view_radius_default"
-        app:layout_constraintEnd_toStartOf="@id/cardFemale"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="32dp"
+        tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMale"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_card_view_height"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/common_card_view_radius_default"
+            app:layout_constraintEnd_toStartOf="@id/cardFemale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgMale"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:contentDescription="@string/img_description"
-                android:src="@drawable/ic_male"
-                app:tint="@color/white" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/male"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/imgMale"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/ic_male"
+                    app:tint="@color/white" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardFemale"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/common_card_view_height"
-        android:layout_marginStart="@dimen/common_margin_default"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/common_card_view_radius_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cardMale"
-        app:layout_constraintTop_toTopOf="parent">
+        </androidx.cardview.widget.CardView>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardFemale"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_card_view_height"
+            android:layout_marginStart="@dimen/common_margin_default"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/common_card_view_radius_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardMale"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imgFemale"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:contentDescription="@string/img_description"
-                android:src="@drawable/ic_female"
-                app:tint="@color/white" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/female"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/imgFemale"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/ic_female"
+                    app:tint="@color/white" />
 
-        </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewHeight"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/common_card_view_height"
-        android:layout_marginTop="@dimen/common_margin_max"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/common_card_view_radius_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardFemale">
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHeight"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_card_view_height"
+            android:layout_marginTop="@dimen/common_margin_default"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/common_card_view_radius_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardFemale">
 
-            <TextView
-                android:id="@+id/tvHeightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_margin_default"
-                android:text="@string/height"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tvHeightNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                tools:text="100" />
-
-            <com.google.android.material.slider.Slider
-                android:id="@+id/sliderHeight"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/common_margin_default"
-                android:layout_marginEnd="@dimen/common_margin_default"
-                android:stepSize="1"
-                android:valueFrom="120"
-                android:valueTo="200" />
+                android:gravity="center"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tvHeightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_default"
+                    android:text="@string/height"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tvHeightNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    tools:text="100" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewWeight"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/common_card_view_height"
-        android:layout_marginTop="@dimen/common_margin_max"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/common_card_view_radius_default"
-        app:layout_constraintEnd_toStartOf="@id/cardViewAge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewHeight">
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/common_margin_default"
+                    android:layout_marginEnd="@dimen/common_margin_default"
+                    android:stepSize="1"
+                    android:valueFrom="120"
+                    android:valueTo="200" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvWeightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_margin_default"
-                android:text="@string/weight"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tvWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWeightText"
-                tools:text="60" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewWeight"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_card_view_height"
+            android:layout_marginTop="@dimen/common_margin_default"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/common_card_view_radius_default"
+            app:layout_constraintEnd_toStartOf="@id/cardViewAge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHeight">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btnSubtractWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/background_fab"
-                android:contentDescription="@string/common_description"
-                android:src="@drawable/ic_subtract"
-                app:layout_constraintEnd_toStartOf="@id/btnPlusWeight"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWeight"
-                app:tint="@color/white" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btnPlusWeight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/background_fab"
-                android:contentDescription="@string/img_description"
-                android:src="@drawable/ic_plus"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btnSubtractWeight"
-                app:layout_constraintTop_toBottomOf="@id/tvWeight"
-                app:tint="@color/white" />
+                <TextView
+                    android:id="@+id/tvWeightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_default"
+                    android:text="@string/weight"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWeightText"
+                    tools:text="60" />
 
-    </androidx.cardview.widget.CardView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnSubtractWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_fab"
+                    android:contentDescription="@string/common_description"
+                    android:src="@drawable/ic_subtract"
+                    app:layout_constraintEnd_toStartOf="@id/btnPlusWeight"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWeight"
+                    app:tint="@color/white" />
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardViewAge"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/common_card_view_height"
-        android:layout_marginStart="@dimen/common_margin_default"
-        android:layout_marginTop="@dimen/common_margin_max"
-        app:cardBackgroundColor="@color/black"
-        app:cardCornerRadius="@dimen/common_card_view_radius_default"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cardViewWeight"
-        app:layout_constraintTop_toBottomOf="@id/cardViewHeight">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnPlusWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_fab"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/ic_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnSubtractWeight"
+                    app:layout_constraintTop_toBottomOf="@id/tvWeight"
+                    app:tint="@color/white" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/tvAgeText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_margin_default"
-                android:text="@string/textAge"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/tvAge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="38sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAgeText"
-                tools:text="28" />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewAge"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_card_view_height"
+            android:layout_marginStart="@dimen/common_margin_default"
+            android:layout_marginTop="@dimen/common_margin_default"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="@dimen/common_card_view_radius_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardViewWeight"
+            app:layout_constraintTop_toBottomOf="@id/cardViewHeight">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btnSubtractAge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/background_fab"
-                android:src="@drawable/ic_subtract"
-                app:layout_constraintEnd_toStartOf="@id/btnPlusAge"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAge" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/btnPlusAge"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/background_fab"
-                android:src="@drawable/ic_plus"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btnSubtractAge"
-                app:layout_constraintTop_toBottomOf="@id/tvAge" />
+                <TextView
+                    android:id="@+id/tvAgeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_margin_default"
+                    android:text="@string/textAge"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="38sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAgeText"
+                    tools:text="28" />
 
-    </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnSubtractAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_fab"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/ic_subtract"
+                    app:layout_constraintEnd_toStartOf="@id/btnPlusAge"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAge"
+                    app:tint="@color/white"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCalculate"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="@dimen/common_margin_max"
-        android:text="@string/calculate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardViewAge" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btnPlusAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/background_fab"
+                    android:contentDescription="@string/img_description"
+                    android:src="@drawable/ic_plus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnSubtractAge"
+                    app:layout_constraintTop_toBottomOf="@id/tvAge"
+                    app:tint="@color/white"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/common_margin_default"
+            android:text="@string/calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewAge" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
