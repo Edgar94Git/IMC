@@ -13,10 +13,15 @@ class ResultImcActivity : AppCompatActivity() {
         mBinding = ActivityResultImcBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
         getIntentExtras()
+        setUpButton()
     }
 
     private fun getIntentExtras(){
-        val result = intent.extras?.getDouble("RESULT_IMC") ?: -1.0
-        mBinding.resultIMC.text = result.toString()
+        val result = intent.extras?.getDouble(Constants.RESULT_IMC) ?: -1.0
+        mBinding.tvResultIMC.text = result.toString()
+    }
+
+    private fun setUpButton(){
+        mBinding.btnReCalculate.setOnClickListener { finish() }
     }
 }

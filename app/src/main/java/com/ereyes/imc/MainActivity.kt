@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openResultIntent(imc: Double) {
         val intent = Intent(this, ResultImcActivity::class.java)
-        intent.putExtra("RESULT_IMC", imc)
+        intent.putExtra(Constants.RESULT_IMC, imc)
         startActivity(intent)
     }
 
