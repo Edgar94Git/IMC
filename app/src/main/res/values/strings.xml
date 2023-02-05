@@ -9,4 +9,6 @@
     <string name="img_description">Imagen del genero</string>
     <string name="weight">Peso</string>
     <string name="textAge">Edad</string>
+    <string name="text_result_imc">Tu Resultado</string>
+    <string name="re_calculate">RE-CALCULAR</string>
 </resources>
