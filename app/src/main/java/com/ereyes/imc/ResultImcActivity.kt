@@ -1,7 +1,11 @@
 package com.ereyes.imc
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.MenuItem
+import android.view.View
 import com.ereyes.imc.databinding.ActivityResultImcBinding
 
 class ResultImcActivity : AppCompatActivity() {
@@ -14,6 +18,12 @@ class ResultImcActivity : AppCompatActivity() {
         setContentView(mBinding.root)
         getIntentExtras()
         setUpButton()
+        setUpActionBar()
+    }
+
+    private fun setUpActionBar() {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = getString(R.string.title_result_imc)
     }
 
     private fun getIntentExtras(){
@@ -23,5 +33,15 @@ class ResultImcActivity : AppCompatActivity() {
 
     private fun setUpButton(){
         mBinding.btnReCalculate.setOnClickListener { finish() }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            android.R.id.home -> {
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
