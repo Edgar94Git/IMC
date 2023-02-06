@@ -11,4 +11,5 @@
     <string name="textAge">Edad</string>
     <string name="text_result_imc">Tu Resultado</string>
     <string name="re_calculate">RE-CALCULAR</string>
+    <string name="title_result_imc">Resultado IMC</string>
 </resources>
