@@ -96,7 +96,7 @@
         android:layout_width="0dp"
         android:layout_height="80dp"
         android:text="@string/re_calculate"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:layout_marginEnd="@dimen/common_margin_default"
         android:layout_marginStart="@dimen/common_margin_default"
         app:layout_constraintEnd_toEndOf="parent"
