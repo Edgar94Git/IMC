@@ -49,10 +49,10 @@ class ResultImcActivity : AppCompatActivity() {
         }
     }
 
-    private fun dataUI(result: Double, resultIMCText: Int, description: Int, color: Int){
+    private fun dataUI(result: Double, resultIMCText: Int, description: Int, colorId: Int){
         mBinding.tvResultIMC.text = result.toString()
         mBinding.tvResultIMCText.text = getString(resultIMCText)
-        mBinding.tvResultIMCText.setTextColor(ContextCompat.getColor(this, color))
+        mBinding.tvResultIMCText.setTextColor(ContextCompat.getColor(this, colorId))
         mBinding.tvResultDescription.text = getString(description)
     }
 

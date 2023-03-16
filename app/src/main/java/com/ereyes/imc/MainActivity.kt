@@ -3,10 +3,8 @@ package com.ereyes.imc
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.core.content.ContextCompat
 import com.ereyes.imc.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpSlider(){
-        mBinding.sliderHeight.addOnChangeListener { slider, value, fromUser ->
+        mBinding.sliderHeight.addOnChangeListener { _, value, _ ->
             height = value
             mBinding.tvHeightNumber.text = height.toString()
         }
