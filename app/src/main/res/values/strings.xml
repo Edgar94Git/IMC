@@ -12,4 +12,13 @@
     <string name="text_result_imc">Tu Resultado</string>
     <string name="re_calculate">RE-CALCULAR</string>
     <string name="title_result_imc">Resultado IMC</string>
+    <string name="bajo_peso">Bajo Peso</string>
+    <string name="bajo_peso_description">Estás por debajo de lo óptimo para tu peso y altura</string>
+    <string name="normal_peso">Normal</string>
+    <string name="normal_peso_description">"Estás en lo óptimo para tu peso y altura "</string>
+    <string name="sobrepeso">Sobrepeso</string>
+    <string name="sobrepreso_description">"Estás por encima de lo óptimo para tu peso y altura "</string>
+    <string name="obesidad">Obesidad</string>
+    <string name="obesidad_description">"Estás muy por encima de lo óptimo para tu peso y altura "</string>
+    <string name="text_error">Error</string>
 </resources>
